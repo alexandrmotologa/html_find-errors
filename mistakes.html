@@ -7,21 +7,20 @@
             background-color: beige;
         }
 
-        h1{
+        header h1{
             color: black;
         }
 
-        h2{
+        header h2{
             color: darkgreen;
         }
 
-        p{
+        .code-example p{
             color: darkblue;
         }
 
-        .logo-example img{
+        .code-example img{
             width: 200px;
-
         }
 
         nav{
@@ -31,27 +30,27 @@
             padding-left: 3px;
             user-select: none;
         }
-        
+
         .menu{
             list-style: none;
             padding: 0;
             margin: 0;
         }
 
-        .menu li{
+        nav .menu li{
             padding-bottom: 6px;
         }
 
-        .menu li a{
+        nav .menu li a{
             text-decoration: none;
             color: black;
         }
 
-        .menu li a:hover{
+        nav .menu li a:hover{
             color:darkred;
         }
 
-        .menu li img{
+        nav .menu li img{
             width: 20px;
             height: 20px;
         }
@@ -60,29 +59,30 @@
 </head>
 <body>
     <!-- in title nu se folosesc taguri html, title trebuie sa fie informativ si scurt, in cazul in care title e prea lung mai bine de adaugat textul direct pe pagina html-->
-    <header itemscope itemtype="http://schema.org/Article">
-        <h1 itemprop="heading">Verifica-ti cunostintele HTML si CSS.</h1>
-        <h2>
-            Gasiti erorile in cod, corectati-le, vedeti daca codul poate fi imbunatatit.
-        </h2>
-        
-    </header>
-    <div class="logo-example" itemscope itemprop="description">
-        <p>
+    
+    <article class="code-example" itemscope itemtype="http://schema.org/Article">
+        <header itemscope itemtype="https://schema.org/headline">
+            <h1 itemprop="heading">Verifica-ti cunostintele HTML si CSS.</h1>
+            <h2>
+                Gasiti erorile in cod, corectati-le, vedeti daca codul poate fi imbunatatit.
+            </h2>
+            
+        </header>
+        <p itemprop="description">
             Acesta este <strong> un text accentuat.</strong>
         </p>
-        <p>
+        <p itemprop="description">
             Tag-ul &lt;img src="url"&gt; este utilizat pentru adaugarea unei imagini. De exemplu:
             <!-- In ce dimensiuni se va afisa imaginea?  width:200px; height: auto;-->
         </p>
-        <img src="result.png" alt="logo pic" itemprop="image"><br>
-        <p>
+        <img src="images/logo.jpg" alt="logo pic" itemprop="image"><br>
+        <p itemprop="description">
         <!-- Ca formula tagului sa fie afisata corect, "brackets" trebuie inlocuite cu &lt; si &gt;-->
         Tag-ul &lt;h1&gt; reprezinta un antet, ca si &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, &lt;h6&gt;.
         <br>
         Tag-ul &lt;b&gt; si &lt;strong&gt; sunt echivalente.   
         </p>
-    </div>
+    </article>
         <!-- Alegeti elementul HTML5 semantic potrivit in care poate fi plasata urmatoarea lista - nav-->
         <!-- Stilurile cu id au valoarea mai mare decat cele a class, atunci culoarea din id daca este indicata va predomina in ul, in cazul in care lipseste deja va fi preluata din class -->
     <nav>
