@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body{
+            background-color: beige;
+        }
+
+        h1{
+            color: black;
+        }
+
+        h2{
+            color: darkgreen;
+        }
+
+        p{
+            color: darkblue;
+        }
+
+        .logo-example img{
+            width: 200px;
+
+        }
+
+        nav{
+            background-color: green;
+            width: 250px;
+            border: 1px solid black;
+            padding-left: 3px;
+            user-select: none;
+        }
+        
+        .menu{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu li{
+            padding-bottom: 6px;
+        }
+
+        .menu li a{
+            text-decoration: none;
+            color: black;
+        }
+
+        .menu li a:hover{
+            color:darkred;
+        }
+
+        .menu li img{
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+    <title>Gasiti erorile in cod</title>
+</head>
+<body>
+    <!-- in title nu se folosesc taguri html, title trebuie sa fie informativ si scurt, in cazul in care title e prea lung mai bine de adaugat textul direct pe pagina html-->
+    <header itemscope itemtype="http://schema.org/Article">
+        <h1 itemprop="heading">Verifica-ti cunostintele HTML si CSS.</h1>
+        <h2>
+            Gasiti erorile in cod, corectati-le, vedeti daca codul poate fi imbunatatit.
+        </h2>
+        
+    </header>
+    <div class="logo-example" itemscope itemprop="description">
+        <p>
+            Acesta este <strong> un text accentuat.</strong>
+        </p>
+        <p>
+            Tag-ul &lt;img src="url"&gt; este utilizat pentru adaugarea unei imagini. De exemplu:
+            <!-- In ce dimensiuni se va afisa imaginea?  width:200px; height: auto;-->
+        </p>
+        <img src="result.png" alt="logo pic" itemprop="image"><br>
+        <p>
+        <!-- Ca formula tagului sa fie afisata corect, "brackets" trebuie inlocuite cu &lt; si &gt;-->
+        Tag-ul &lt;h1&gt; reprezinta un antet, ca si &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, &lt;h6&gt;.
+        <br>
+        Tag-ul &lt;b&gt; si &lt;strong&gt; sunt echivalente.   
+        </p>
+    </div>
+        <!-- Alegeti elementul HTML5 semantic potrivit in care poate fi plasata urmatoarea lista - nav-->
+        <!-- Stilurile cu id au valoarea mai mare decat cele a class, atunci culoarea din id daca este indicata va predomina in ul, in cazul in care lipseste deja va fi preluata din class -->
+    <nav>
+        <ul id="images-ul" class="menu">
+            <li><a href="1.html"><img src="images/1.jpg" alt="Image 1">Link 1</a> </li>
+            <li><a href="2.html"><img src="images/2.jpg" alt="Image 2">Link 2</a> </li>
+            <li class="active"><a href="3.html"><img src="images/3.jpg" alt="Image 3">Link 3</a> </li>
+            <li><a href="4.html"><img src="images/4.jpg" alt="Image 4">Link 4</a> </li>
+            <li><a href="5.html"><img src="images/5.jpg" alt="Image 5">Link 5</a> </li>
+        </ul>
+    </nav>
+</body>
+</html>
